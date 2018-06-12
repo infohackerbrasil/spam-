@@ -1,0 +1,44 @@
+
+E-mail Spam 
+
+
+
+
+
+import smtplib
+
+
+
+smtp = smtplib.SMTP('smtp.gmail.com', 587)
+
+smtp.ehlo()
+smtp.starttls()
+
+user = ('seu email')
+passwd =  ('sua senha')
+man = input('E-Mail vitima:')
+num = (1)
+msg = input('Mensagen:')
+
+
+
+try:
+    smtp .login(user,passwd)
+    print ('LODING')
+except:
+    print('ERRO')
+
+
+
+x = 0
+
+while (x , num):
+    smtp.sendmail(user, man, msg)
+    x=x+1
+    print("[+]Emviando",x,"para",man)
+
+
+
+
+
+
